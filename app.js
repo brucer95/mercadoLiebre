@@ -12,6 +12,5 @@ app.get("/register", (req, res) => {
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 
-app.listen(5050, () => {
-	console.log("La aplicación está escuchando en el puerto 5050");
-});
+const port = process.env.port || 3001;
+app.listen(port, () => console.log("servidor corriendo en el puerto 3001"));
