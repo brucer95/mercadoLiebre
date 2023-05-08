@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/public/css/register.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Mercado liebre</title>
+	</head>
+	<body>
+		<div class="container-register">
+			<form action="#">
+				<div class="container-form">
+					<input type="text" placeholder="Nombre y apellido" />
+
+					<input type="text" placeholder="nombre de usuario" />
+
+					<input type="text" placeholder="E-mail" />
+
+					<label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+					<input
+						type="date"
+						id="fecha_nacimiento"
+						name="fecha_nacimiento"
+					/>
+
+					<input type="text" placeholder="Domicilio" />
+
+					<h3>Categorías de Interés:</h3>
+
+					<div class="sellect">
+						<label for="electro">Electro </label>
+						<input
+							type="checkbox"
+							id="electro"
+							name="categorias"
+							value="electro"
+						/>
+					</div>
+					<div class="sellect">
+						<label for="electro">Jugueteria </label>
+						<input
+							type="checkbox"
+							id="electro"
+							name="categorias"
+							value="electro"
+						/>
+					</div>
+					<div class="sellect">
+						<label for="electro">Moda </label>
+						<input
+							type="checkbox"
+							id="electro"
+							name="categorias"
+							value="electro"
+						/>
+					</div>
+					<div class="sellect">
+						<label for="electro">Higiene </label>
+						<input
+							type="checkbox"
+							id="electro"
+							name="categorias"
+							value="electro"
+						/>
+					</div>
+					<div class="button-register">
+						<button type="submit">Registrarse</button>
+					</div>
+				</div>
+				<button type="reset">Borrar datos</button>
+			</form>
+		</div>
+	</body>
+</html>
