@@ -5,5 +5,7 @@ const mainControllers = require("../controllers/mainControllers");
 
 router.get("/", mainControllers.inicio);
 router.get("/register", mainControllers.register);
+router.get("/login", mainControllers.login);
+
 
 module.exports = router;
