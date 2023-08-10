@@ -1,4 +1,4 @@
-*,
+/* *,
 *::after,
 *::before {
 	box-sizing: border-box;
@@ -8,7 +8,7 @@
 body {
 	background-color: #eac926;
 	font-size: 12px;
-}
+} */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 .container-register {

@@ -1,71 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<%- include ('../partials/head') %>
 		<link href="/css/styles.css" rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Mercado liebre</title>
 	</head>
 	<body>
-		<header>
-			<div class="container-header">
-				<div class="top-header">
-					<img
-						src="/images/logo-mercado-liebre.svg"
-						alt="mercadolivre"
-					/>
-
-					<div class="search-bar">
-						<input
-							type="text"
-							placeholder="buscar productos, marcas"
-						/>
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</div>
-				</div>
-
-				<div class="compracuotas">
-					<i class="fa-solid fa-hand-holding-dollar"></i>
-					<p>compra en coutas y sin tarjeta de credito</p>
-				</div>
-			</div>
-
-			<div class="navbar">
-				<ul>
-					<li><a href="https://www.google.com.ar">ofertas</a></li>
-					<li>
-						<a href="https://www.google.com.ar"
-							>tiendas oficiales</a
-						>
-					</li>
-					<li><a href="https://www.google.com.ar">vender</a></li>
-					<li><a href="https://www.google.com.ar">ayuda</a></li>
-				</ul>
-				<ul>
-					<li>
-						<a href="register">Crea tu cuenta</a>
-						<i class="fa-regular fa-address-card"></i>
-					</li>
-					<li>
-						<a href="login">Ingresa</a>
-						<i class="fa-solid fa-right-to-bracket"></i>
-					</li>
-					<li>
-						<a href="https://www.google.com.ar">Mis compras</a>
-						<i class="fa-solid fa-basket-shopping"></i>
-					</li>
-				</ul>
-			</div>
-			<div class="barramenu"><i class="fa-solid fa-bars"></i></div>
-		</header>
-
+		<%- include ('../partials/header') %>
 		<main>
 			<img
 				class="banner"
@@ -85,11 +25,11 @@
 						<div class="icono-imagen">
 							<i class="fa-solid fa-truck"></i>
 						</div>
-                        <div class="precios-off">
-						<div id="precios">$6.770</div>
-						<div class="off">40% off</div>
-                        </div>
-                    
+						<div class="precios-off">
+							<div id="precios">$6.770</div>
+							<div class="off">40% off</div>
+						</div>
+
 						<div class="descripcion">Cafetera Moulinex</div>
 					</div>
 				</div>
@@ -104,10 +44,10 @@
 						<div class="icono-imagen">
 							<i class="fa-solid fa-truck"></i>
 						</div>
-                        <div class="precios-off">
-						<div id="precios">$230.000</div>
-						<div class="off">20% off</div>
-                    </div>
+						<div class="precios-off">
+							<div id="precios">$230.000</div>
+							<div class="off">20% off</div>
+						</div>
 						<div class="descripcion">MacBook Pro 2019</div>
 					</div>
 				</div>
@@ -122,10 +62,10 @@
 						<div class="icono-imagen">
 							<i class="fa-solid fa-truck"></i>
 						</div>
-                        <div class="precios-off">
-						<div id="precios">$70.000</div>
-						<div class="off">10% off</div>
-                    </div>
+						<div class="precios-off">
+							<div id="precios">$70.000</div>
+							<div class="off">10% off</div>
+						</div>
 						<div class="descripcion">Samsung Galaxy S10</div>
 					</div>
 				</div>
@@ -140,53 +80,18 @@
 						<div class="icono-imagen">
 							<i class="fa-solid fa-truck"></i>
 						</div>
-                        <div class="precios-off">
-						<div id="precios">$23.000</div>
-						<div class="off">5% off</div>
-                    </div>
+						<div class="precios-off">
+							<div id="precios">$23.000</div>
+							<div class="off">5% off</div>
+						</div>
 						<div class="descripcion">SmartTv Samsung 43"</div>
 					</div>
 				</div>
 			</article>
 		</main>
-		<div class="div-section">
-			<section class="pago">
-				<div class="pago-tarjeta">
-					<i class="fas fa-credit-card"></i>
-				</div>
-				<h3 class="tituloseccion">Paga con tarjeta o en efectivo</h3>
-				<p>
-					Con mercadolibreCash tenes coutas sin interes con tarjeta o
-					efectivo en puntos de pago. Y siempre seguro!
-				</p>
-			</section>
-			<section class="envio">
-				<div class="pagocontarjeta"><i class="fas fa-gift"></i></div>
-				<h3 class="tituloseccion">Envio gratis desde los $2.500</h3>
-				<p>
-					Solo por estar registrado en Mercado Liebre tenes envios
-					gratis en miles de productos. Es un beneficio de Mercado
-					Puntos
-				</p>
-			</section>
-			<section class="seguridad">
-				<div class="pagotarjeta">
-					<i class="fas fa-user-shield"></i>
-				</div>
 
-				<h3 class="tituloseccion">Seguridad de principio a fin</h3>
-				<p>
-					No te gusta? Devolvelo! En mercadoLiebre no hay nada que no
-					puedas hacer porque estas siempre protegido.
-				</p>
-            </div>
-			</section>
-			<div class="copyright">
-				<footer>
-					<div>Copyright Â© 1999-2020 MercadoLiebre S.R.L.</div>
-				</footer>
-			</div>
-		
+		<%- include ('../partials/footer') %>
+
 		<script
 			src="https://kit.fontawesome.com/4fed1f4ea0.js"
 			crossorigin="anonymous"
