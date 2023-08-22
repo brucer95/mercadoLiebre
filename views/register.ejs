@@ -8,66 +8,74 @@
 	<body>
 		<%- include ('../partials/header') %>
 		<div class="container-register">
-			<form action="#">
+			<form
+				action="/register"
+				method="POST"
+				enctype="multipart/form-data"
+			>
 				<div class="container-form">
-					<input type="text" placeholder="Nombre y apellido" />
-
-					<input type="text" placeholder="nombre de usuario" />
-
-					<input type="text" placeholder="E-mail" />
-
-					<label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+					<% for (let i = 0; i < errors.length; i++) { %>
+					<p style="color: red"><%= errors[i].msg %></p>
+					<% } %>
+					<label for="">Nombre</label>
 					<input
-						type="date"
-						id="fecha_nacimiento"
-						name="fecha_nacimiento"
+						type="text"
+						value="<%= values.first_name %>"
+						name="first_name"
+						id=""
 					/>
 
-					<input type="text" placeholder="Domicilio" />
+					<label for="">Apellido</label>
+					<input
+						type="text"
+						value="<%= values.last_name %>"
+						name="last_name"
+						id=""
+					/>
 
-					<h3>Categorías de Interés:</h3>
+					<label for="">Nombre de usuario</label>
+					<input
+						type="text"
+						value="<%= values.username %>"
+						name="username"
+						id=""
+					/>
+					<label for="img">Imagen</label>
+					<input
+						type="file"
+						accept=".jpg, .jpeg, .png"
+						name="profileImg"
+						id="img"
+					/>
+					<label for="">Correo electrónico</label>
+					<input
+						type="email"
+						value="<%= values.email %>"
+						name="email"
+						id=""
+					/>
 
-					<div class="sellect">
-						<label for="electro">Electro </label>
-						<input
-							type="checkbox"
-							id="electro"
-							name="categorias"
-							value="electro"
-						/>
-					</div>
-					<div class="sellect">
-						<label for="electro">Jugueteria </label>
-						<input
-							type="checkbox"
-							id="electro"
-							name="categorias"
-							value="electro"
-						/>
-					</div>
-					<div class="sellect">
-						<label for="electro">Moda </label>
-						<input
-							type="checkbox"
-							id="electro"
-							name="categorias"
-							value="electro"
-						/>
-					</div>
-					<div class="sellect">
-						<label for="electro">Higiene </label>
-						<input
-							type="checkbox"
-							id="electro"
-							name="categorias"
-							value="electro"
-						/>
+					<label for="">Contraseña</label>
+					<input
+						type="password"
+						value="<%= values.password %>"
+						name="password"
+						id=""
+					/>
+
+					<label for="">Confirmar contraseña</label>
+					<input type="password" name="confirmPassword" id="" />
+
+					<div class="checkbox">
+						<input type="checkbox" name="news" id="" />
+						<label for=""
+							>Deseo recibir las últimas novedades</label
+						>
 					</div>
 					<div class="button-register">
 						<button type="submit">Registrarse</button>
 					</div>
 				</div>
-				<button type="reset">Borrar datos</button>
 			</form>
 		</div>
 		<%- include ('../partials/footer') %>

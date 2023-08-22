@@ -11,19 +11,21 @@
 		<div class="main-login">
 			<input type="checkbox" id="chk" aria-hidden="true" />
 			<div class="signup">
-				<form>
+				<form method="POST" action="/login">
 					<label for="chk" aria-hidden="true">Iniciar sesion</label>
 					<input
 						type="email"
 						name="email"
-						placeholder="Email"
-						required=""
+						id="email-login"
+						placeholder="Tu correo electrónico"
+						required
 					/>
 					<input
 						type="password"
-						name="pswd"
-						placeholder="Password"
-						required=""
+						name="password"
+						id="password-login"
+						placeholder="Escribe tu contraseña"
+						required
 					/>
 					<button>Ingresar</button>
 				</form>

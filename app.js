@@ -5,6 +5,9 @@ const app = express();
 const mainRoutes = require("./routes/mainRoutes");
 const productRoutes = require("./routes/productRoutes");
 const shoppingRoutes = require("./routes/shoppingRoutes");
+const methodOverride = require("method-override");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 
 app.set("view engine", "ejs");
 app.set("views", [
@@ -14,6 +17,17 @@ app.set("views", [
 ]);
 // identifica los archivos de la carpeta public como css e imagenes
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(methodOverride("_method"));
+app.use(cookieParser());
+app.use(
+	session({
+		secret: "mlibre",
+		resave: false,
+		saveUninitialized: true,
+	})
+);
 
 // routes
 app.use(mainRoutes);

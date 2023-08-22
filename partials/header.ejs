@@ -25,6 +25,9 @@
 			<li><a href="https://www.google.com.ar">ayuda</a></li>
 		</ul>
 		<ul>
+			<% if (user) { %>
+			<h3 style="color: white">Bienvenido <%= user.username %></h3>
+			<% } %> <% if (!user) { %>
 			<li>
 				<a href="register">Crea tu cuenta</a>
 				<i class="fa-regular fa-address-card"></i>
@@ -34,9 +37,10 @@
 				<i class="fa-solid fa-right-to-bracket"></i>
 			</li>
 			<li>
-				<a href="https://www.google.com.ar">Mis compras</a>
+				<a href="shoppingCart">Mis compras</a>
 				<i class="fa-solid fa-basket-shopping"></i>
 			</li>
+			<% } %>
 		</ul>
 	</div>
 	<div class="barramenu"><i class="fa-solid fa-bars"></i></div>
