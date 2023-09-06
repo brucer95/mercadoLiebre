@@ -69,8 +69,8 @@ a {
 	padding: 1em;
 	position: relative;
 	z-index: 1;
-	color: #f7f7f7;
-	background: rgb(233, 233, 67);
+	color: #000000;
+	background: #ff9016;
 }
 
 .cart {
@@ -99,29 +99,29 @@ a {
 	text-align: center;
 }
 
-.th {
-	background: rgb(233, 233, 67);
-	color: #fff;
+.th {background: #ff9016;
+	color: #130e0e;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.5em;
 }
 
 .tf {
-	background: #e6f335;
+	background: #ff9016;;
 	text-transform: uppercase;
 	text-align: right;
 	font-size: 1.2em;
 }
 
 .tf p {
-	color: #fff;
+	background: #ff9016;;
 	font-weight: bold;
 }
 
 .col {
 	padding: 1em;
 	width: 12%;
+	
 }
 
 .col-pro {
@@ -184,20 +184,19 @@ a.qty {
 	font-weight: bold;
 	text-align: center;
 	background: #43ace3;
-	color: #fff;
+	background: #ff9016;;
 }
 
 a.qty:hover {
 	background: #3b9ac6;
 }
-
 .btn {
 	padding: 10px 30px;
 	border-radius: 0.3em;
 	font-size: 1.4em;
 	font-weight: bold;
 	background: #43ace3;
-	color: #fff;
+	background: #ff9016;
 }
 
 .btn:hover {

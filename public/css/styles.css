@@ -7,6 +7,7 @@ body {
 	background-color: #eac926;
 	font-size: 12px;
 	margin: auto;
+	position: relative;
 }
 #precios {
 	font-size: 18px;
@@ -160,6 +161,8 @@ main h3 {
 footer {
 	margin-top: 50px;
 	margin-bottom: 20px;
+	position: absolute;
+	width: 100%;
 }
 .top-header {
 	display: flex;

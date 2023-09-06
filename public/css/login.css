@@ -20,6 +20,8 @@
 	border-radius: 10px;
 	box-shadow: 8px 0px 100px #000;
 	font-family: "Jost", sans-serif;
+	margin: auto;
+    margin-top: 120px;
 }
 #chk {
 	display: none;
