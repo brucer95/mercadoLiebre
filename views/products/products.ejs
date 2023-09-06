@@ -5,82 +5,25 @@
 		<link href="/css/styles.css" rel="stylesheet" />
 		<link href="/css/products.css" rel="stylesheet" />
 	</head>
-
 	<header><%- include ('../partials/header') %></header>
-
 	<body>
-		
-            <div id="wrap">
-            <div id="columns" class="columns_4">
-          <figure>
-          <img src="https://assets.iprofesional.com/assets/jpg/2021/01/510201.jpg">
-            <figcaption>Renault Clio Mio Dynamique</figcaption>
-            
-            <span class="price">$3.500.000 - Belgrano, Capital Federal</span></span>
-            <a class="button" href="#">Ver Mas</a>
-            </figure>
-            
-            <figure>
-                <img src="https://media.diariouno.com.ar/p/2d2b8ec7b7361b6a7e857f17081e6105/adjuntos/298/imagenes/009/075/0009075062/1200x0/smart/usados-vw-gol-trendjpg.jpg">
-                  <figcaption>Volkswagen Gol Trend 1.6 Pack Ii 101cv</figcaption>
-                  
-                  <span class="price">$3.500.000</span></span>
-                  <a class="button" href="#">Ver Mas</a>
-                  </figure>
-            
-                  <figure>
-                    <img src="https://tn.com.ar/resizer/Qa1jtfMgTL8khDvhUrGfexd4fj8=/767x0/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/artear/CECSUH54TFBNDFG66UCHLKWRYY.jpg">
-                      <figcaption>Toyota Yaris GR Four</figcaption>
-                      
-                      <span class="price">$3.500.000</span></span>
-                      <a class="button" href="#">Ver Mas</a>
-                      </figure>
-          
-                      <figure>
-                        <img src="https://redaccionrosario.com/wp-content/uploads/2018/12/Autos-850x491.jpg">
-                          <figcaption>Chevrolet Spin 1.8 Activ7 Ltz 5as At 105cv</figcaption>
-                          
-                          <span class="price">$3.500.000</span></span>
-                          <a class="button" href="#">Ver Mas</a>
-                          </figure>
-            
-                          <figure>
-                            <img src="https://assets.iprofesional.com/assets/jpg/2020/02/491750.jpg">
-                              <figcaption>Chevrolet Corsa 1.6 Gl Aa Dh</figcaption>
-                              
-                              <span class="price">$3.500.000</span></span>
-                              <a class="button" href="#">Ver Mas</a>
-                              </figure>
-            
-                              <figure>
-                                <img src="https://www.clarin.com/img/2021/11/16/sXC7ESsMW_720x0__1.jpg">
-                                  <figcaption>Fiat Toro 1.8 Freedom</figcaption>
-                                  
-                                  <span class="price">$3.500.000</span></span>
-                                  <a class="button" href="#">Ver Mas</a>
-                                  </figure>
-                                  <figure>
-                                    <img src="https://media.diariouno.com.ar/p/2d2b8ec7b7361b6a7e857f17081e6105/adjuntos/298/imagenes/009/075/0009075062/1200x0/smart/usados-vw-gol-trendjpg.jpg">
-                                      <figcaption>Volkswagen Gol Trend 1.6 Pack Ii 101cv</figcaption>
-                                      
-                                      <span class="price">$3.500.000</span></span>
-                                      <a class="button" href="#">Ver Mas</a>
-                                      </figure>
-                                      <figure>
-                                        <img src="https://media.diariouno.com.ar/p/2d2b8ec7b7361b6a7e857f17081e6105/adjuntos/298/imagenes/009/075/0009075062/1200x0/smart/usados-vw-gol-trendjpg.jpg">
-                                          <figcaption>Volkswagen Gol Trend 1.6 Pack Ii 101cv</figcaption>
-                                          
-                                          <span class="price">$3.500.000</span></span>
-                                          <a class="button" href="#">Ver Mas</a>
-                                          </figure>
-          
-            
-        </div>
-        
-        
+		<div id="wrap">
+			<div id="columns" class="columns_4">
+				<% productos.forEach(producto => { %>
+				<figure>
+					<img src="<%= producto.imageUrl %>" />
+					<figcaption><%= producto.name %></figcaption>
+					<span class="price"><%= producto.description %></span>
+					<br />
+					<br />
+					<span class="price"><h2>$ <%= producto.price %></h2></span>
+					<a class="button" href="#">Ver Mas</a>
+				</figure>
+				<% }); %>
+			</div>
+		</div>
 	</body>
 	<footer><%- include ('../partials/footer') %></footer>
-
 	<script
 		src="https://kit.fontawesome.com/4fed1f4ea0.js"
 		crossorigin="anonymous"

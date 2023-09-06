@@ -13,7 +13,7 @@ router.post(
 	[upload.single("profileImg")],
 	mainControllers.registerUser
 );
-router.get("/login", mainControllers.login);
+router.get("/login", allowUnsignedIn, mainControllers.login);
 router.post("/login", mainControllers.loginController);
 
 module.exports = router;
