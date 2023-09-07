@@ -3,12 +3,15 @@ const path = require("path");
 const { User } = require("../database/models");
 const bcrypt = require("bcrypt");
 const { v4: uuidv4 } = require("uuid");
+const { Product } = require("../database/models");
 
 const controllers = {
 	inicio: async (req, res) => {
 		try {
+			const productos = await Product.findAll({ raw: true });
 			res.render("home", {
 				user: req.session.user,
+				productos: productos,
 			});
 		} catch (error) {
 			res.send("Ocurrio un Error");

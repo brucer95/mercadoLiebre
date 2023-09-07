@@ -26,7 +26,10 @@
 		</ul>
 		<ul>
 			<% if (user) { %>
-			<h3 style="color: white">Bienvenido <%= user.username %></h3>
+			<div class="loged-user">
+				<i class="fa-solid fa-user fa-2xl" style="color: #fafafa"></i>
+				<h3 style="color: white">Bienvenido <%= user.username %></h3>
+			</div>
 			<% } %> <% if (!user) { %>
 			<li>
 				<a href="register">Crea tu cuenta</a>

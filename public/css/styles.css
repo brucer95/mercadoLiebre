@@ -201,6 +201,15 @@ footer {
 	margin-top: 10px;
 }
 
+.loged-user {
+	display: flex;
+	align-items: center;
+}
+
+.loged-user h3 {
+	margin-left: 10px;
+}
+
 @media (max-width: 361px) {
 	.descripcion {
 		display: none;

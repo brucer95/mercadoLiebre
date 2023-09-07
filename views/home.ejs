@@ -13,11 +13,13 @@
 				alt="banner-home"
 			/>
 			<h3 class="visita">Basado en tu ultima visita</h3>
-			<article class="products">
+
+			<section class="products">
+				<% productos.forEach(producto => { %>
 				<div class="product">
 					<div class="items-caja">
 						<img
-							src="/images/img-cafetera-moulinex.jpg"
+							src="<%= producto.imageUrl %>"
 							alt="cafetera"
 							width="200"
 							height="150"
@@ -26,68 +28,17 @@
 							<i class="fa-solid fa-truck"></i>
 						</div>
 						<div class="precios-off">
-							<div id="precios">$6.770</div>
-							<div class="off">40% off</div>
+							<div id="precios">$ <%= producto.price %></div>
+							<div class="off">%<%= producto.off %></div>
 						</div>
 
-						<div class="descripcion">Cafetera Moulinex</div>
+						<div class="descripcion">
+							<%= producto.description %>
+						</div>
 					</div>
 				</div>
-				<div class="product">
-					<div class="items-caja">
-						<img
-							src="/images/img-macbook-pro-2019.jpg"
-							alt="macbook"
-							width="200"
-							height="150"
-						/>
-						<div class="icono-imagen">
-							<i class="fa-solid fa-truck"></i>
-						</div>
-						<div class="precios-off">
-							<div id="precios">$230.000</div>
-							<div class="off">20% off</div>
-						</div>
-						<div class="descripcion">MacBook Pro 2019</div>
-					</div>
-				</div>
-				<div class="product">
-					<div class="items-caja">
-						<img
-							src="/images/img-samsung-galaxy-s10.jpg"
-							alt="Samsung"
-							width="200"
-							height="150"
-						/>
-						<div class="icono-imagen">
-							<i class="fa-solid fa-truck"></i>
-						</div>
-						<div class="precios-off">
-							<div id="precios">$70.000</div>
-							<div class="off">10% off</div>
-						</div>
-						<div class="descripcion">Samsung Galaxy S10</div>
-					</div>
-				</div>
-				<div class="product">
-					<div class="items-caja">
-						<img
-							src="/images/img-tv-samsung-smart.jpg"
-							alt="Smart TV"
-							width="200"
-							height="150"
-						/>
-						<div class="icono-imagen">
-							<i class="fa-solid fa-truck"></i>
-						</div>
-						<div class="precios-off">
-							<div id="precios">$23.000</div>
-							<div class="off">5% off</div>
-						</div>
-						<div class="descripcion">SmartTv Samsung 43"</div>
-					</div>
-				</div>
-			</article>
+				<% }); %>
+			</section>
 		</main>
 
 		<%- include ('../partials/footer') %>

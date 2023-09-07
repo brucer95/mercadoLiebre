@@ -24,6 +24,12 @@ module.exports = (Sequelize, DataType) => {
 		imageUrl: {
 			type: DataType.STRING,
 		},
+		off: {
+			type: DataType.DECIMAL(10, 2),
+			validate: {
+				isDecimal: true,
+			},
+		},
 	};
 	const config = {
 		tableName: "products",

@@ -6,7 +6,7 @@ const validar = require("../middleware/validations");
 const upload = require("../middleware/userImg");
 const { allowUnsignedIn } = require("../middleware/authUser");
 
-router.get("/", mainControllers.inicio);
+router.get("/", [upload.single("imageUrl")], mainControllers.inicio);
 router.get("/register", allowUnsignedIn, mainControllers.register);
 router.post(
 	"/register",
