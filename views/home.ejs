@@ -16,27 +16,29 @@
 
 			<section class="products">
 				<% productos.forEach(producto => { %>
-				<div class="product">
-					<div class="items-caja">
-						<img
-							src="<%= producto.imageUrl %>"
-							alt="cafetera"
-							width="200"
-							height="150"
-						/>
-						<div class="icono-imagen">
-							<i class="fa-solid fa-truck"></i>
-						</div>
-						<div class="precios-off">
-							<div id="precios">$ <%= producto.price %></div>
-							<div class="off">%<%= producto.off %></div>
-						</div>
+				<a href="/products/<%= producto.id %>/productDetail/">
+					<div class="product">
+						<div class="items-caja">
+							<img
+								src="<%= producto.imageUrl %>"
+								alt="cafetera"
+								width="200"
+								height="150"
+							/>
+							<div class="icono-imagen">
+								<i class="fa-solid fa-truck"></i>
+							</div>
+							<div class="precios-off">
+								<div id="precios">$ <%= producto.price %></div>
+								<div class="off">%<%= producto.off %></div>
+							</div>
 
-						<div class="descripcion">
-							<%= producto.description %>
+							<div class="descripcion">
+								<%= producto.description %>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 				<% }); %>
 			</section>
 		</main>

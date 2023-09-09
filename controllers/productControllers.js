@@ -14,6 +14,25 @@ const controllers = {
 			res.status(500).send("Error al obtener los productos.");
 		}
 	},
+	detail: async (req, res) => {
+		const id = Number(req.params.id);
+		try {
+			const detailProduct = await Product.findByPk(id);
+
+			if (!detailProduct) {
+				return res.send("error de ID");
+			}
+
+			res.render("productDetail", {
+				title: "Detalle del producto",
+				detailProduct,
+				user: req.session.user,
+			});
+		} catch (error) {
+			console.log(error);
+			res.send("Error inesperado");
+		}
+	},
 };
 
 module.exports = controllers;

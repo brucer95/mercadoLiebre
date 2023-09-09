@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include ("../partials/head") %>
+		<link href="/css/styles.css" rel="stylesheet" />
+		<link href="/css/productDetail.css" rel="stylesheet" />
+		<title>Detalle del producto</title>
+	</head>
+	<body>
+		<%- include ("../partials/header") %>
+
+		<div class="product-detail">
+			<img src="<%= detailProduct.imageUrl %>" />
+			<h2><%= detailProduct.description %></h2>
+			<p><%= detailProduct.name %></p>
+			<span class="product-price"><%= detailProduct.price %></span>
+		</div>
+	</body>
+
+	<footer><%- include("../partials/footer") %></footer>
+
+	<script
+		src="https://kit.fontawesome.com/4fed1f4ea0.js"
+		crossorigin="anonymous"
+	></script>
+</html>
