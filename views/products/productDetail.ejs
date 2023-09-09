@@ -14,6 +14,14 @@
 			<h2><%= detailProduct.description %></h2>
 			<p><%= detailProduct.name %></p>
 			<span class="product-price"><%= detailProduct.price %></span>
+			<br />
+			<Br />
+			<% if (user && user.admin) { %>
+			<button type="submit">Editar</button>
+			<br />
+			<br />
+			<button type="submit">Eliminar</button>
+			<% } %>
 		</div>
 	</body>
 
