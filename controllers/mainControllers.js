@@ -95,8 +95,11 @@ const controllers = {
 			req.session.user = searchedUser;
 			console.log(searchedUser);
 
+			const productos = await Product.findAll({ raw: true });
+
 			res.render("home", {
 				user: searchedUser,
+				productos: productos,
 			});
 		} catch (error) {
 			"Hubo un problema" + console.log(error);
