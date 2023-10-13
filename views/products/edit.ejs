@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Editar producto</title>
+	</head>
+	<body>
+		<h1 class="titulo">
+			Estas modificando: <%= editProduct.description %>
+		</h1>
+		<form
+			action="/products/<%=editProduct.id%>/edit?_method=put"
+			method="POST"
+			enctype="multipart/form-data"
+			class="formedit"
+		>
+			<input type="hidden" name="id" value="<%= editProduct.id %>" />
+
+			<div class="input-container">
+				<label for="">Titulo</label>
+				<input
+					type="text"
+					name="title"
+					id=""
+					value="<%= editProduct.title %>"
+				/>
+				<br />
+			</div>
+			<div class="input-container">
+				<label for="">Descripción</label><br />
+				<textarea name="description" id="descripcion-producto">
+<%= editProduct.description %></textarea
+				>
+				<style>
+					#descripcion-producto {
+						width: 400px;
+						height: 200px;
+					}
+				</style>
+				<br />
+			</div>
+
+			<div class="input-container">
+				<label for="">Precio</label>
+				<input
+					type="number"
+					name="price"
+					id=""
+					value="<%= editProduct.price 
+            %>"
+				/><br />
+			</div>
+            <br>
+            <input type="submit" value="MODIFICAR PRODUCTO"></input>
+		</form>
+	</body>
+</html>

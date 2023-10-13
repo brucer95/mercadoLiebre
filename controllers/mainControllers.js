@@ -9,6 +9,7 @@ const controllers = {
 	inicio: async (req, res) => {
 		try {
 			const productos = await Product.findAll({ raw: true });
+
 			res.render("home", {
 				user: req.session.user,
 				productos: productos,
@@ -97,12 +98,71 @@ const controllers = {
 
 			const productos = await Product.findAll({ raw: true });
 
+			res.cookie("userCookie", searchedUser.username, {
+				maxAge: 7 * 24 * 60 * 60 * 1000,
+				httpOnly: true,
+			});
+
 			res.render("home", {
 				user: searchedUser,
 				productos: productos,
 			});
 		} catch (error) {
 			"Hubo un problema" + console.log(error);
+		}
+	},
+	logOut: (req, res) => {
+		res.clearCookie("userCookie");
+
+		req.session.destroy();
+
+		res.redirect("/login");
+	},
+	editUser: async (req, res) => {
+		const idedit = req.params.id;
+		try {
+			const edituser = await User.findOne({
+				where: { id: idedit },
+			});
+
+			if (!edituser) {
+				return res.send("error al modificar el usuario");
+			}
+			res.render("editUser", {
+				edituser,
+				user: req.session.user,
+			});
+		} catch (error) {
+			"ha surgido un error" + console.log(error);
+		}
+	},
+	modifiedUser: async (req, res) => {
+		const userId = req.params.id;
+		const { username, email } = req.body;
+
+		try {
+			const userpost = await User.findOne({
+				where: { id: userId },
+			});
+			if (!userpost) {
+				return res.send("no se puede acceder al usuario");
+			}
+
+			await userpost.update({ username, email });
+
+			req.session.user = userpost;
+
+			const productos = await Product.findAll({ raw: true });
+
+			res.locals.successMessage = "Usuario Modificado";
+
+			res.render("home", {
+				user: req.session.user,
+				productos: productos,
+				successMessage: "Nombre modificado con éxito",
+			});
+		} catch (error) {
+			console.log("Error al modificar el usuario: " + error);
 		}
 	},
 };

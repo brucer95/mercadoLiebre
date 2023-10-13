@@ -5,7 +5,11 @@
 				<img src="/images/logo-mercado-liebre.svg" alt="mercadolivre" />
 			</a>
 			<div class="search-bar">
-				<input type="text" placeholder="buscar productos, marcas" />
+				<input
+					id="buscador"
+					type="text"
+					placeholder="buscar productos, marcas"
+				/>
 				<i class="fa-solid fa-magnifying-glass"></i>
 			</div>
 		</div>
@@ -28,8 +32,11 @@
 		<ul>
 			<% if (user) { %>
 			<div class="loged-user">
-				<i class="fa-solid fa-user fa-2xl" style="color: #fafafa"></i>
 				<h3 style="color: white">Bienvenido <%= user.username %></h3>
+				<a href="/logout">
+					<p class="closesession">Cerrar sesion</p>
+				</a>
+				<a href="/<%= user.id %>/editUser">Editar</a>
 			</div>
 			<% } %> <% if (!user) { %>
 			<li>
@@ -44,6 +51,7 @@
 				<a href="/shoppingCart">Mis compras</a>
 				<i class="fa-solid fa-basket-shopping"></i>
 			</li>
+
 			<% } %>
 		</ul>
 	</div>

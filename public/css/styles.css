@@ -202,11 +202,18 @@ footer {
 }
 
 .loged-user {
-	display: flex;
 	align-items: center;
 }
 
 .loged-user h3 {
+	margin-left: 10px;
+}
+
+.closesession {
+	margin-left: 10px;
+}
+
+.editUser {
 	margin-left: 10px;
 }
 
@@ -253,6 +260,52 @@ footer {
 	.barramenu {
 		margin: auto;
 		margin-top: 12px;
+	}
+	.visita {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.descripcion {
+		display: none;
+	}
+	.products {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.product {
+		padding: 5px;
+	}
+	.barramenu {
+		display: block;
+	}
+	.container-header img {
+		width: 100px;
+	}
+	body {
+		width: 100%;
+	}
+	.search-bar {
+		padding-left: 5px;
+	}
+	.container-header {
+		flex-direction: column;
+	}
+	.top-header {
+		display: flex;
+		width: 95%;
+	}
+	.compracuotas {
+		width: 100%;
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	.barramenu {
+		display: none;
 	}
 	.visita {
 		text-align: center;

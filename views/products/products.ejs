@@ -11,7 +11,9 @@
 			<div id="columns" class="columns_4">
 				<% productos.forEach(producto => { %>
 				<figure>
-					<img src="<%= producto.imageUrl %>" />
+					<a href="/products/<%= producto.id %>/productDetail/">
+						<img src="<%= producto.imageUrl %>" />
+					</a>
 					<figcaption><%= producto.name %></figcaption>
 					<span class="price"><%= producto.description %></span>
 					<br />

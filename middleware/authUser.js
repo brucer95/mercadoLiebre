@@ -15,10 +15,15 @@ function allowSignedIn(req, res, next) {
 }
 
 function allowAdmin(req, res, next) {
-	if (req.session.user.type === "admin") {
-		next();
+	if (!req.session.user) {
+		return res.redirect("/");
+	}
+	const admin = JSON.stringify(req.session.user.admin);
+	console.log(admin);
+	if (admin == 0) {
+		return res.redirect("/");
 	} else {
-		res.redirect("/");
+		next();
 	}
 }
 
